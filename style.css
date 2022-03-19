@@ -1,10 +1,12 @@
 body {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 3rem;
+    gap:2rem;
 }
 section {
     width: 25%;
-    height: 40rem;
+    height: fit-content;
     background-image: linear-gradient(rgb(143, 138, 138), rgb(231, 219, 219));
     border-radius: 10px;
 }
@@ -14,11 +16,21 @@ nav {
     height: 4rem;
     justify-content: space-between;
 }
-
-.name-date {
-    line-height: 0.2rem;
+.nav-left {
+    display: flex;
 }
-
+.name-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h3,h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+h4 {
+    color: white;
+}
 figure {
     width: 100%;
     margin: 0;
@@ -45,28 +57,25 @@ p {
     margin: 1rem;
 }
 
-/* mobile version */
-
-@media only screen and (max-width: 375px) {
+/* tablet version */
+@media only screen and (max-width: 992px) {
 body {
-    display: block;
-}
-
-section {
-    width: 100%;
-    margin-bottom: 3rem;
-}
-}
-
-@media only screen and (max-width: 768px) {
-body {
-    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-
 section {
-    width: 41%;
-    margin: 2rem 2rem;
+    width: 47%;
 }
 }
+
+/* mobile version */
+
+@media only screen and (max-width: 576px) {
+    body {
+        justify-content: center;
+    }
+    section {
+        width: 90%;
+    }
+    }
+    
